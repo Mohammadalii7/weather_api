@@ -56,7 +56,7 @@
     async function checkweather(city) {
         const response = await fetch(APIurl + city + `&appid=${APIkey}`);
         let data = await response.json();
-        
+
         if (response.status == 404) {
             document.querySelector(".error").style.display = "block";
             document.querySelector(".weather").style.display = "none";
